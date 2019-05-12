@@ -2,6 +2,9 @@ version: '3'
 services:
   app:
     build: .
+    volumes:
+      - ./example:/home/example
+    working_dir: /home/example
     networks:
       - default
     stdin_open: true
